@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/iconsfont.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script async type="module">
+        import {enableSwiper} from './js/swiper.js'
+        import {animateSearch} from './js/search.js'
+        import {preventDefault} from './js/prevent.js'
+        import {enableMobileNav} from './js/nav.js'
+
+        enableSwiper()
+        animateSearch()
+        preventDefault()
+        enableMobileNav()
+    </script>
+    <title>Document</title>
+</head>
+<body>
+<nav id="nav-mobile" class="nav nav-mobile">
+    <ul class="nav__list">
+        <li class="nav__item">
+            <a class="nav__link" href="">новости</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="">о вампилове</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="">о кульурном центре</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="">афиша</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="">контакты</a>
+        </li>
+    </ul>
+</nav>
+<header class="header container">
+
+    <div class="header__body">
+        <div class="header__lang lang">
+            <label class="lang__label selected" for="ru">
+                <input checked name="lang" class="lang__input" id="ru" type="radio">
+                <span class="lang__text">рус</span>
+            </label>
+            <label class="lang__label" for="en">
+                <input name="lang" class="lang__input" id="en" type="radio">
+                <span class="lang__text">eng</span>
+            </label>
+        </div>
+        <ul class="header__top top">
+            <li class="top__item">
+                <button id="menu-bar" class="top__button" ><span class="top__icon"></span></button>
+            </li>
+            <li class="top__item search ">
+                <button class="search__button icon-search"></button>
+                <form class="search__form" action="">
+                    <input placeholder="Поиск..." class="search__input"/>
+                    <button class="search__submit" type="submit">Найти</button>
+                </form>
+            </li>
+            <li class="top__item">
+                <button class="top__button"><span class="top__icon"></span></button>
+            </li>
+        </ul>
+        <img src="./img/logo.png" class="header__logo "/>
+        <ul class="header__social social">
+            <li class="social__item">
+                <a href="" class="social__link"><span class="social__icon"></span></a>
+            </li>
+            <li class="social__item">
+                <a href="" class="social__link"><span class="social__icon"></span></a>
+            </li>
+            <li class="social__item">
+                <a href="" class="social__link"><span class="social__icon"></span></a>
+            </li>
+            <li class="social__item">
+                <a href="" class="social__link"><span class="social__icon"></span></a>
+            </li>
+        </ul>
+        <div class="header__decor"></div>
+        <button class="header__vision">
+            Версия для слабовидящих
+        </button>
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="">новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="">о вампилове</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="">о кульурном центре</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="">афиша</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="">контакты</a>
+                </li>
+                <li class="header__search search nav__search">
+                    <button id="search-open" class="search__button icon-search"></button>
+                    <form id="search-form" class="search__form" action="">
+                        <input id="search-input" placeholder="Поиск..." class="search__input"/>
+                        <button class="search__submit" type="submit">Найти</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</header>
+<section class="hero">
+    <div class="display">
+        <div id="sw-img" class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="swiper-back"></div>
+                    <picture class="display__picture">
+                        <source class="display__image" srcset="./img/hero-1-mobile.png" media="(max-width: 900px)"/>
+                        <img class="display__image" src="./img/hero-1-desktop.png" alt="Событие">
+                    </picture>
+                    <div class="swiper-slide-wrapper">
+                        <div class="container">
+                            <h2 class="display__title">«На антресолях…»</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-back"></div>
+                    <picture class="display__picture">
+                        <source class="display__image" srcset="./img/hero-2-mobile.png" media="(max-width: 900px)"/>
+                        <img class="display__image" src="./img/hero-2-desktop.png" alt="Событие">
+                    </picture>
+                    <div class="swiper-slide-wrapper">
+                        <div class="container">
+                            <h2 class="display__title">Картинная галерея</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-back"></div>
+                    <picture class="display__picture">
+                        <source class="display__image" srcset="./img/hero-3-mobile.png" media="(max-width: 900px)"/>
+                        <img class="display__image" src="./img/hero-3-desktop.png" alt="Событие">
+                    </picture>
+                    <div class="swiper-slide-wrapper">
+                        <div class="container">
+                            <h2 class="display__title">Библиотека</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-back"></div>
+                    <picture class="display__picture">
+                        <source class="display__image" srcset="./img/hero-4-mobile.png" media="(max-width: 900px)"/>
+                        <img id="four-slide-image" class="display__image" src="./img/hero-4-desktop.png" alt="Событие">
+                    </picture>
+                    <div class="swiper-slide-wrapper">
+                        <div class="container">
+                            <h2 class="display__title">Литературно- <br>театральный салон</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="display__body">
+                    <div class="display__decor decor">
+                        <div class="decor__item"></div>
+                        <div class="decor__item"></div>
+                        <div class="decor__item"></div>
+                        <div class="decor__item"></div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev icon-arrow-right"></div>
+                <div class="swiper-button-next icon-arrow-left "></div>
+            </div>
+
+
+        </div>
+        <div class="display__bottom">
+            <div class="container">
+                <div class="display__content">
+                    <button class="display__button button">подробнее →</button>
+                    <div id="sw-txt" class="swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <p class="display__text">
+                                    Тема постоянной экспозиции – жизнь и творчество Александра Вампилова, выдающегося
+                                    драматурга.
+                                    Более 120 экспонатов: личные вещи Вампилова, предметы, связанные с эпохой 1960-х, а
+                                    также с
+                                    историей театра и Иркутска.
+                                </p>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <p class="display__text">
+                                    Регулярно устраиваем творческие вечера, представления и презентации. Вы можете
+                                    провести
+                                    свое
+                                    мероприятие в салоне. Мы посодействуем вам в организации культурного, научного или
+                                    познавательно-развлекательного события.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="display__text">
+                                    На полках – книги на вампиловскую тематику. Самые ценные сборники материалов и
+                                    статей о
+                                    жизни и
+                                    творчестве мирового драматурга. А также художественная проза, книги по истории
+                                    театра,
+                                    филологии, краеведению.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="display__text">
+                                    Включает актуальные течения ХХ и XXI века.
+                                    Художественная коллекция содержит более 200 работ: живопись, графика и
+                                    декоративно-прикладное
+                                    искусство. Формируется с 1996 года.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="hero__static static">
+            <p class="static__text">С любовью рассказываем об Александре&nbsp;Вампилове и искусстве. Проводим творческие
+                встречи,
+                организуем спектакли, выставки</p>
+            <button class="static__button button">купить билеты →</button>
+        </div>
+    </div>
+
+
+</section>
+</body>
+</html>
